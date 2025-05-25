@@ -1,8 +1,9 @@
+import { API_BASE_URL } from "../../lib/config";
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
     try {
-        const response = await fetch("https://api.openaq.org/v3/locations?coordinates=51.5074,-0.1278&radius=25000&parameters_id=3&parameters_id=5&limit=30", {
+        const response = await fetch(`${API_BASE_URL}/locations?coordinates=51.5074,-0.1278&radius=25000&parameters_id=3&parameters_id=5&limit=30`, {
             headers: {
                 "X-API-KEY": process.env.API_KEY,
             }

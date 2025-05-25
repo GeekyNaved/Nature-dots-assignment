@@ -16,6 +16,7 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
     readOnly = false,
     options,
     isOptionEqualToValue,
+    placeholder,
     ...other
   } = props;
 
@@ -55,7 +56,7 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
           id={id}
           disabled={disabled}
           readOnly={readOnly}
-          placeholder="Enter station of London"
+          placeholder={placeholder}
           {...getInputProps()}
           className="leading-[1.5] text-gray-900 dark:text-gray-300 bg-inherit border-0 rounded-[inherit] p-4 outline-0 grow shrink-0 basis-auto"
         />
@@ -119,15 +120,17 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
 });
 
 export default function StationSelector({
-  stationsData,
-  selectedStation,
-  setSelectedStation,
+  data,
+  selectedOption,
+  setSelectedOption,
+  placeholder,
 }) {
   return (
     <Autocomplete
-      options={stationsData}
+      placeholder={placeholder}
+      options={data}
       isOptionEqualToValue={(option, value) => option.name === value.name}
-      onChange={(event, newValue) => setSelectedStation(newValue)}
+      onChange={(event, newValue) => setSelectedOption(newValue)}
     />
   );
 }
