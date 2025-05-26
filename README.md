@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌿 Nature Dots Assignment
 
-## Getting Started
+A web application built using **Next.js**, **Tailwind CSS**, and **Material UI**. This app features interactive charts, clean UI components, toast notifications, and date-based functionality.
 
-First, run the development server:
+---
 
+## 🚀 Live Preview
+
+https://nature-dots-assignment.vercel.app/
+
+---
+
+## 🚀 Document explaining the main components of the web application.
+
+https://docs.google.com/document/d/13HQnjxnCnj9n845tQVTlXainEKIcRzIDlQBBXuR_jWw/edit?usp=sharing
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/)
+- **UI Libraries:** [Material UI](https://mui.com/), [Tailwind CSS](https://tailwindcss.com/)
+- **Charting:** [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/)
+- **Date Handling:** [dayjs](https://day.js.org/)
+- **API Requests:** [Axios](https://axios-http.com/)
+- **Notifications:** [React Toastify](https://fkhadra.github.io/react-toastify/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+
+
+### IMPORTANT NOTE 
+create .env file in root folder and create a variable API_KEY then store your API key from https://openaq.org/
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+API_KEY = your api key will come here
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Installation Guide
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd nature-dots-assignment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+### 2. Install Dependencies
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+# or
+yarn install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+### 3. Run the Development Server
+```bash
+npm run dev
+ or
+yarn dev
+Visit http://localhost:3000 in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+### 4. Build for Production
+```bash
+npm run build
 
-## Deploy on Vercel
+```
+### 5. Start the Production Server
+```bash
+npm run start
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+### 6. Optional: Lint Your Code
+```bash
+npm run lint
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+### 🧩 Project Structure Overview
+```bash
+├── components/         # Reusable UI components (e.g., charts, cards)
+├── pages/              # Next.js routing system
+├── public/             # Static assets
+├── styles/             # Tailwind CSS and global styles
+├── utils/ or lib/      # Helper functions, API calls (using Axios)
+├── package.json        # Project dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+└── README.md           # Project documentation
+
+```
+### 📊 Features
+📈 Dynamic charts using Chart.js
+
+📅 Elegant date pickers with MUI X
+
+🔔 Toast notifications for UX feedback
+
+🌈 Styled with Tailwind and MUI
+
+🔄 Axios integration for APIs
+
+### 📚 Available Scripts
+```bash
+npm run dev           // development server
+npm run build	      // Build for production
+npm run start	      //Start production server
